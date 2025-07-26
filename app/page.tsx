@@ -112,6 +112,12 @@ const faqs = [
   },
 ]
 
+const roleImages = {
+  students: "/students.png",
+  professionals: "/professionals.png",
+  institutions: "/institutions.png",
+}
+
 export default function ArchitectureAcademics() {
   const [activeRole, setActiveRole] = useState<Role>("students")
   const [currentTestimonial, setCurrentTestimonial] = useState(0)
@@ -230,13 +236,13 @@ export default function ArchitectureAcademics() {
               <div className="relative">
                 <div className="bg-gradient-to-br from-orange-100 to-amber-100 rounded-2xl p-8 relative overflow-hidden">
                   <Image
-                    src="/placeholder.svg?height=400&width=500&text=Student+Learning+Illustration"
+                    src={roleImages[activeRole]}
                     alt="Architecture Learning"
                     width={500}
                     height={400}
                     className="relative z-10"
                   />
-                  <div className="absolute top-4 right-4 w-16 h-16 bg-[#FF9A1F] rounded-full flex items-center justify-center">
+                  <div className="absolute top-4 right-4 w-16 h-16 bg-[#FF9A1F] rounded-full flex items-center justify-center z-20">
                     <Play className="w-8 h-8 text-white ml-1" />
                   </div>
                 </div>
